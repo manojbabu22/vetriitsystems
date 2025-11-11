@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetri IT Systems</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Fredoka,"sans-serif"
+        }
+
+        header{
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 100px;
+            
+        }
+        .navbar ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            font-size: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #364153;
+            position: relative;
+        }
+
+       
+        
+
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.4s ease;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        .navbar img {
+            width: 75px;
+            height: 75px;
+        }
+
+        .navbar .btn {
+            background-color: #0057ff;
+            border-radius: 5px;
+            color: white;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        
+
+        .btn:hover {
+            background-color: #0039aa;
+        }
+        
+
+        .about{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 100px;
+        }
+
+        .left-content{
+            width: 50%;
+           
+            display: grid;
+            text-align: left;
+            margin: 0 50px;
+            
+        }
+        .left-content h1{
+            font-size: 36px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .left-content p{
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        span {
+            color: #0057ff;
+        }
+
+        .box {
+            display: inline-block;
+            margin-right: 30px;
+            text-align: center;
+             color: #364153;
+        }
+
+        
+
+        .btn {
+            background-color: #0057ff;
+            border-radius: 5px;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: large;
+        }
+
+        .right-content {
+            width: 50%;
+        }
+
+        .right-content img{
+            width: 500px;
+            height: auto;
+        }
+
+       .container {
+        margin-top: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+    .img-area {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      
+    }
+    .img-area img {
+      width: 450px;
+      height: 450px;
+    }
+    .content {
+      max-width: 300px;
+    }
+    .content h2 {
+      font-size: 2.1rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+    }
+    
+    .benefits-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .benefits-list li {
+      display: flex;
+      align-items: center;
+      font-size: 1.14rem;
+      gap: 18px;
+      border-radius: 6px;
+      padding: 4px 0 ;
+    }
+    
+    
+    .icon-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eef3fb;
+    }
+    .icon-circle img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .process {
+            text-align: center;
+            margin: 50px auto;
+            max-width: 700px;
+        }
+
+        .process h2 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .process p {
+            font-size: 1.3rem;
+            color: #555;
+    }
+
+    .img-process {
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-process img {
+
+        width: 80vw;
+        height: 40vh;
+    }
+
+    footer {
+       background-color: #1447e6;
+       width: 100%;
+       display: flex;
+         justify-content: space-around;
+         /* align-items: center; */
+         padding: 30px 0;
+        color: white;
+    }
+    footer .heading {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        max-width: 150px;
+    }
+    .footer-logo h3{
+        font-size: 30px;
+        font-weight: lighter;
+    }
+    .footer-logo img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+    }
+
+    .footer-section {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .footer-links a {
+        text-decoration: none;
+        color: white;
+        margin-bottom: 12px;
+        transition: transform 0.3s ease;
+
+    }
+
+    .footer-links   a:hover {
+        transform: translateX(5px);
+        color: #ffdd57;
+    }
+
+
+
+    .footer-contact  {
+        
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .icon {
+      
+      display: inline-block;
+      padding: 10px;
+      
+    }
+
+   
+    .icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #1447e6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .social-icon:hover {
+        background-color: white;
+    }
+    .social-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+     </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="images/logo.webp" alt="logo">
+
+            <ul class="nav-links">
+               <li><a href="#">About Us</a></li> 
+               <li><a href="#">Web Development</a></li>
+               <li><a href="#">Software Development</a></li>
+               <li><a href="#">Digital Marketing</a></li>
+               <li><a href="#" class="btn">Enquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about">
+        <div class="left-content">
+            <h1><span>Technology</span> is best when it brings people together.</h1>
+            <p>At <span>Vetri IT Systems</span>, we specialize in providing advanced technology solutions tailored to meet the unique needs of every business.</p>
+            <div class="box-content">
+            <div class="box">
+                <h2>20+</h2>
+                <p>Projects</p>
+            </div>
+            <div class="box">
+                <h2>20+</h2>
+                <p>Clients</p>
+            </div>
+            <div class="box">
+                <h2>30+</h2>
+                <p>Technologies</p>
+            </div>
+            </div>
+            <div>
+                <a href="#" class="btn">Get Started</a>
+            </div>
+        </div>
+
+        <div class="right-content">
+            <img src="images/VIS Home page.webp" alt="HomePage">
+        </div>
+        
+
+    </section>
+
+    <section class="container">
+        <div class="img-area">
+            <img src="images/VIS img 2-.webp" alt="best">
+        </div>
+
+        <div class="content">
+            <h2>Why We Are The <span>Best</span> From Others?</h2>
+
+        <ul class="benefits-list">
+        <li>
+          <span class="icon-circle">
+            <img src="images/VIS on time delivery.webp" alt="On Time Delivery">
+          </span>
+          On Time Delivery
+        </li>
+        <li>
+          <span class="icon-circle">
+            <img src="images/2.png" alt="Quality Services">
+          </span>
+          Quality Services
+        </li>
+        <li>
+          <span class="icon-circle">
+            <img src="images/3.png" alt="Expertise">
+          </span>
+          Expertise that Leads
+        </li>
+        <li>
+          <span class="icon-circle">
+            <img src="images/4.png" alt="Affordable">
+          </span>
+          Affordable Price
+        </li>
+        <li>
+          <span class="icon-circle">
+            <img src="images/5.png" alt="Support">
+          </span>
+          Best Customer Support
+        </li>
+        <li class="selected">
+          <span class="icon-circle">
+            <img src="images/6.png" alt="Results">
+          </span>
+          Proven Results and happy clients
+        </li>
+      </ul>
+        </div>
+    </section>
+
+    <section class="process">
+        <h2>Our <span>Work Process</span></h2>
+        <p>Our innovative process combines cutting-edge technology with creative problem-solving, ensuring tailored solutions that drive efficiency and growth for our clients.</p>
+    </section>
+
+    <section class="img-process">
+        <img src="images/VIS Work Process-.webp" alt="workprocess">
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="images/logo.webp" alt="logo">
+            <h3>Vetri IT Systems</h3>
+        </div>
+
+        <div class="footer-section">
+            <p class="heading">Quick Links</p>
+            <nav class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Web Development</a>
+                <a href="#">Software Development</a>
+                <a href="#">Digital Marketing</a>
+            </nav>
+        </div>
+
+        <div class="footer-contact">
+            <p class="heading">Contact Details</p>
+            <div class="footer-contact">
+                <p><span class="icon"><img src="images/telephone.png" alt="telephone"></span>8438558627, 8438558527</p>
+                <p><span class="icon"><img src="images/mail.png" alt="email"></span>business@vetriit.com</p>
+                <p><span class="icon"><img src="images/location.png" alt="location"></span>VTS & VIS, Surandai.</p>
+
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <p class="heading">Follow Us</p>
+            <div class="footer-social">
+            <div class="social-icon">
+                <img src="images/instagram.png" alt="insta">
+            </div>
+
+             <div class="social-icon">
+                <img src="images/linkedin.png" alt="linkedin">
+            </div>
+
+             <div class="social-icon">
+                <img src="images/facebook-logo.png" alt="facebook">
+            </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
