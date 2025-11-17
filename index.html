@@ -225,6 +225,65 @@
         height: 40vh;
     }
 
+    .testimonial {
+        text-align: center;
+        margin: 50px auto;
+        line-height: 1.6;
+        /* display: grid; */
+    }
+
+    .test-all {
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        margin: 20px 100px;
+    }
+
+    .test-grid {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        align-items: center;
+        background-color: #e5e8ec;
+        border-right: 3px solid #0057ff;
+        text-align: left;
+    }
+
+    .left-grid {
+        width: 20%;
+        margin-bottom: 90px;
+    }       
+
+    
+    .left-grid img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .project {
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 20px 100px;
+    }
+
+    .project img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
     footer {
        background-color: #1447e6;
        width: 100%;
@@ -258,7 +317,7 @@
         border-radius: 50%;
     }
 
-    .footer-section {
+    .footer-div {
         display: flex;
         flex-direction: column;
         align-items: left;
@@ -334,19 +393,19 @@
 <body>
     <header>
         <nav class="navbar">
-            <img src="images/logo.webp" alt="logo">
+            <a href="index.html"><img src="images/logo.webp" alt="logo"></a>
 
             <ul class="nav-links">
-               <li><a href="#">About Us</a></li> 
+               <li><a href="about.html">About Us</a></li> 
                <li><a href="#">Web Development</a></li>
-               <li><a href="#">Software Development</a></li>
-               <li><a href="#">Digital Marketing</a></li>
+               <li><a href="software.html">Software Development</a></li>
+               <li><a href="digital.html">Digital Marketing</a></li>
                <li><a href="#" class="btn">Enquiry</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="about">
+    <div class="about">
         <div class="left-content">
             <h1><span>Technology</span> is best when it brings people together.</h1>
             <p>At <span>Vetri IT Systems</span>, we specialize in providing advanced technology solutions tailored to meet the unique needs of every business.</p>
@@ -374,9 +433,9 @@
         </div>
         
 
-    </section>
+    </div>
 
-    <section class="container">
+    <div class="container">
         <div class="img-area">
             <img src="images/VIS img 2-.webp" alt="best">
         </div>
@@ -423,16 +482,79 @@
         </li>
       </ul>
         </div>
-    </section>
+    </div>
 
-    <section class="process">
+    <div class="process">
         <h2>Our <span>Work Process</span></h2>
         <p>Our innovative process combines cutting-edge technology with creative problem-solving, ensuring tailored solutions that drive efficiency and growth for our clients.</p>
-    </section>
+    </div>
 
-    <section class="img-process">
+    <div class="img-process">
         <img src="images/VIS Work Process-.webp" alt="workprocess">
-    </section>
+    </div>
+
+    <div class="testimonial">
+        <h1>Our <span>Client Testimonial</span></h1>
+        <p>What Our Customers Are Saying. Hear from the people who trust us to deliver excellence every time.</p>
+        <div class="test-all">
+                <div class="test-grid">
+                    <div class="left-grid">
+                        <img src="images/riya.webp" alt="riya">
+                    </div>
+                    <div class="right-grid">
+                        <h3>Riya</h3>
+                        <p>"Vetri IT Systems built a custom CRM for us that improved our team collaboration and tracking. The results were instant!"</p>
+                        <p style="color: gold;">★★★★★</p>
+                    </div>
+                </div>
+
+                <div class="test-grid">
+                    <div class="left-grid">
+                        <img src="images/johan.webp" alt="riya">
+                    </div>
+                    <div class="right-grid">
+                        <h3>Johan</h3>
+                        <p>"The cloud migration handled by Vetri IT was smooth and stress-free. Our operations are now faster and more secure."</p>
+                        <p style="color: gold;">★★★★★</p>
+                    </div>
+                </div>
+
+                <div class="test-grid">
+                    <div class="left-grid">
+                        <img src="images/danish.webp" alt="riya">
+                    </div>
+                    <div class="right-grid">
+                        <h3>Danish</h3>
+                        <p>"Their support team is extremely responsive. Whenever we needed help, they were just a call away. Amazing service!"</p>
+                        <p style="color: gold;">★★★★★</p>
+                    </div>
+                </div>
+
+                <div class="test-grid">
+                    <div class="left-grid">
+                        <img src="images/ritika.webp" alt="riya">
+                    </div>
+                    <div class="right-grid">
+                        <h3>Ritika</h3>
+                        <p>"We approached Vetri IT for a mobile app solution, and they delivered a sleek, user-friendly app right on schedule!"</p>
+                        <p style="color: gold;">★★★★★</p>
+                    </div>
+                </div>
+            
+
+            </div>
+
+    </div>
+
+    <div class="project">
+        <h1>Our <span>Projects</span></h1>
+        <div class="project-grid">
+        <img src="images/VIS Nagercoil Builders.webp" alt="builders">
+        <img src="images/VTS  projects .webp" alt="vetri">
+        <img src="images/VIS Rushi project.webp" alt="Rushi">
+        <img src="images/VIS VDC Project.webp" alt="">
+        </div>
+    </div>
 
     <footer>
         <div class="footer-logo">
@@ -440,13 +562,13 @@
             <h3>Vetri IT Systems</h3>
         </div>
 
-        <div class="footer-section">
+        <div class="footer-div">
             <p class="heading">Quick Links</p>
             <nav class="footer-links">
-                <a href="#">About Us</a>
+                <a href="about.html">About Us</a>
                 <a href="#">Web Development</a>
-                <a href="#">Software Development</a>
-                <a href="#">Digital Marketing</a>
+                <a href="software.html">Software Development</a>
+                <a href="digital.html">Digital Marketing</a>
             </nav>
         </div>
 
@@ -460,7 +582,7 @@
             </div>
         </div>
 
-        <div class="footer-section">
+        <div class="footer-div">
             <p class="heading">Follow Us</p>
             <div class="footer-social">
             <div class="social-icon">

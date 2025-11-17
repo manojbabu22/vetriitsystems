@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetri IT Systems</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Fredoka,"sans-serif"
+        }
+
+        header{
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 100px;
+            
+        }
+        .navbar ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            font-size: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #364153;
+            position: relative;
+        }
+
+       
+        
+
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.4s ease;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        .navbar img {
+            width: 75px;
+            height: 75px;
+        }
+
+        .navbar .btn {
+            background-color: #0057ff;
+            border-radius: 5px;
+            color: white;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        
+
+        .btn:hover {
+            background-color: #0039aa;
+        }
+
+          span {
+            color: #0057ff;
+        }
+
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        margin: 80px 100px;
+    }
+
+    .left {
+        line-height: 1.6;
+        width: 50%;
+
+    }
+    .left h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .left p {
+        font-size: 1.25em;
+        color: #444;
+    }
+
+    .right {
+        width: 50%;
+        display: flex;
+        justify-content: center;        
+        align-items: center;    
+    }   
+
+    .right img {
+        width: 70%;
+        border-radius: 15px;
+    }
+
+    .div-container {
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+      margin: 60px 0;
+    }
+    .card {
+      background: #e3f0ff;
+      border-radius: 22px;
+      box-shadow: 0 4px 24px rgba(51, 123, 255, 0.08);
+      width: 45%;
+      padding: 48px 32px 36px 32px;
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .icon-circle {
+      background: #256ffe;
+      border-radius: 50%;
+      width: 78px;
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -38px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 2px 8px rgba(51,123,255,0.18);
+      overflow: hidden;
+    }
+    .icon-img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+    }
+    .card-title {
+      margin-top: 52px;
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #222941;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+      text-align: center;
+    }
+    .card-title span {
+      color: #2766fe;
+    }
+    .card-content {
+      font-size: 1em;
+      color: #222941;
+      text-align: center;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+
+    footer {
+       background-color: #1447e6;
+       width: 100%;
+       display: flex;
+         justify-content: space-around;
+         /* align-items: center; */
+         padding: 30px 0;
+        color: white;
+    }
+    footer .heading {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        max-width: 150px;
+    }
+    .footer-logo h3{
+        font-size: 30px;
+        font-weight: lighter;
+    }
+    .footer-logo img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+    }
+
+    .footer-div {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .footer-links a {
+        text-decoration: none;
+        color: white;
+        margin-bottom: 12px;
+        transition: transform 0.3s ease;
+
+    }
+
+    .footer-links   a:hover {
+        transform: translateX(5px);
+        color: #ffdd57;
+    }
+
+
+
+    .footer-contact  {
+        
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .icon {
+      
+      display: inline-block;
+      padding: 10px;
+      
+    }
+
+   
+    .icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #1447e6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .social-icon:hover {
+        background-color: white;
+    }
+    .social-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+     </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html"><img src="images/logo.webp" alt="logo"></a>
+
+            <ul class="nav-links">
+               <li><a href="about.html">About Us</a></li> 
+               <li><a href="#">Web Development</a></li>
+               <li><a href="software.html">Software Development</a></li>
+               <li><a href="digital.html">Digital Marketing</a></li>
+               <li><a href="#" class="btn">Enquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="about">
+        <div class="left">
+            <h1><span>About</span> Us</h1>
+            <p>Vetri IT Systems is a dynamic IT solutions provider, specializing in cutting-edge technology services. We deliver innovative software development, IT consulting, and digital transformation solutions tailored to meet diverse business needs. Committed to excellence, we empower organizations with reliable, scalable, and cost-effective technology solutions.</p>
+        </div>
+
+        <div class="right">
+            <img src="images/VIS About us.webp" alt="about">
+        </div>
+    </div>
+
+    <div class="div-container">
+    <!-- Vision Card (Replace icon1.png with your vision icon image) -->
+    <div class="card">
+      <div class="icon-circle">
+        <img src="images/VIS Vision.webp" alt="Vision" class="icon-img">
+      </div>
+      <div class="card-title">Our <span>Vision</span></div>
+      <div class="card-content">
+        To be a globally recognized leader in delivering innovative IT solutions that transform businesses and create a sustainable impact. We envision a future where technology seamlessly empowers organizations to achieve their goals, enhance customer experiences, and drive growth. By staying ahead of emerging trends and fostering creativity, we aim to set new benchmarks in the IT industry, contributing to a digitally connected and efficient world.
+      </div>
+    </div>
+    <!-- Mission Card (Replace icon2.png with your mission icon image) -->
+    <div class="card">
+      <div class="icon-circle">
+        <img src="images/VIS mission.webp" alt="Mission" class="icon-img">
+      </div>
+      <div class="card-title">Our <span>Mission</span></div>
+      <div class="card-content">
+        At Vetri IT Systems, our mission is to harness the power of technology to enable businesses to unlock their full potential. We are committed to providing tailored, cutting-edge solutions that address complex challenges, streamline operations, and enhance productivity. By prioritizing quality, collaboration, and customer satisfaction, we strive to build long-lasting partnerships based on trust and innovation. Our dedication extends to nurturing talent, embracing diversity, and fostering a culture of continuous learning and improvement to deliver excellence at every step.
+      </div>
+    </div>
+  </div>
+
+     <footer>
+        <div class="footer-logo">
+            <img src="images/logo.webp" alt="logo">
+            <h3>Vetri IT Systems</h3>
+        </div>
+
+        <div class="footer-div">
+            <p class="heading">Quick Links</p>
+            <nav class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="#">Web Development</a>
+                <a href="software.html">Software Development</a>
+                <a href="digital.html">Digital Marketing</a>
+            </nav>
+        </div>
+
+        <div class="footer-contact">
+            <p class="heading">Contact Details</p>
+            <div class="footer-contact">
+                <p><span class="icon"><img src="images/telephone.png" alt="telephone"></span>8438558627, 8438558527</p>
+                <p><span class="icon"><img src="images/mail.png" alt="email"></span>business@vetriit.com</p>
+                <p><span class="icon"><img src="images/location.png" alt="location"></span>VTS & VIS, Surandai.</p>
+
+            </div>
+        </div>
+
+        <div class="footer-div">
+            <p class="heading">Follow Us</p>
+            <div class="footer-social">
+            <div class="social-icon">
+                <img src="images/instagram.png" alt="insta">
+            </div>
+
+             <div class="social-icon">
+                <img src="images/linkedin.png" alt="linkedin">
+            </div>
+
+             <div class="social-icon">
+                <img src="images/facebook-logo.png" alt="facebook">
+            </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

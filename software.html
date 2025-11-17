@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Fredoka,"sans-serif"
+        }
+
+        header{
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 100px;
+            
+        }
+        .navbar ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            font-size: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #364153;
+            position: relative;
+        }
+
+       
+        
+
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.4s ease;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        .navbar img {
+            width: 75px;
+            height: 75px;
+        }
+
+        .navbar .btn {
+            background-color: #0057ff;
+            border-radius: 5px;
+            color: white;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        
+
+        .btn:hover {
+            background-color: #0039aa;
+        }
+
+         span {
+            color: #0057ff;
+        }
+
+    .software-1 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px 50px;
+        gap: 20px;
+       
+    }
+
+    .left-1 {
+     width: 50%;   
+     line-height: 1.5;
+
+    }
+
+    .left-1 h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .left-1 p {
+        font-size: 18px;
+    }
+
+    .right-1 {
+        width: 50%;
+    }
+
+    .right-1 img {
+        width: 100%;
+    }
+
+         .software-2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px 50px;
+        gap: 20px;
+       
+    }
+
+    .right-2 {
+     width: 50%;   
+     line-height: 1.5;
+
+    }
+
+    .right-2 h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .right-2 p {
+        font-size: 18px;
+    }
+
+    .left-2 {
+        width: 50%;
+    }
+
+    .left-2 img {
+        width: 100%;
+    }
+
+
+     footer {
+       background-color: #1447e6;
+       width: 100%;
+       display: flex;
+         justify-content: space-around;
+         /* align-items: center; */
+         padding: 30px 0;
+        color: white;
+    }
+    footer .heading {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        max-width: 150px;
+    }
+    .footer-logo h3{
+        font-size: 30px;
+        font-weight: lighter;
+    }
+    .footer-logo img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+    }
+
+    .footer-div {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .footer-links a {
+        text-decoration: none;
+        color: white;
+        margin-bottom: 12px;
+        transition: transform 0.3s ease;
+
+    }
+
+    .footer-links   a:hover {
+        transform: translateX(5px);
+        color: #ffdd57;
+    }
+
+
+
+    .footer-contact  {
+        
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .icon {
+      
+      display: inline-block;
+      padding: 10px;
+      
+    }
+
+   
+    .icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #1447e6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .social-icon:hover {
+        background-color: white;
+    }
+    .social-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+     </style>
+</head>
+<body>
+     <header>
+        <nav class="navbar">
+            <a href="index.html"><img src="images/logo.webp" alt="logo"></a>
+
+            <ul class="nav-links">
+               <li><a href="about.html">About Us</a></li> 
+               <li><a href="#">Web Development</a></li>
+               <li><a href="software.html">Software Development</a></li>
+               <li><a href="digital.html">Digital Marketing</a></li>
+               <li><a href="#" class="btn">Enquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="software">
+        <div class="software-1">
+        <div class="left-1">
+            <h2><span>Software</span> Development</h2>
+            <p>Software Development Services involve designing, creating, deploying, and maintaining software applications tailored to meet specific business needs. These services cover a range of offerings, including custom application development, software consulting, system integration, cloud solutions, and mobile or web app development.They enable businesses to optimize processes, improve efficiency, and deliver seamless user experiences by leveraging cutting-edge technologies and agile methodologies. A focus on scalability, security, and innovation ensures that the solutions align with evolving market demands and organizational goals.</p>
+        </div>
+        <div class="right-1">
+            <img src="images/sntsoftware.gif" alt="software development">
+        </div>
+    </div>
+
+    <div class="software">
+        <div class="software-2">
+            <div class="left-2">
+                <img src="images/android-app-development.gif" alt="2">
+            </div>
+            <div class="right-2">
+                <h2><span>Native App</span> Development</h2>
+                <p>Our Native App Development services offer end-to-end solutions to bring your app ideas to life. From concept and design to development and deployment, we build high-performance, user-friendly apps for iOS, Android, and cross-platform environments. Whether you're launching a startup or enhancing an existing business, our team ensures seamless functionality, modern UI/UX, and scalable architecture tailored to your goals.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="software">
+        <div class="software-1">
+        <div class="left-1">
+            <h2><span>Hybrid App</span> Development</h2>
+            <p>Our hybrid app development services combine the power of web and native technologies to deliver high-performance mobile apps that work seamlessly across both Android and iOS platforms. We use modern frameworks like Flutter and React Native to create cost-effective, scalable, and feature-rich applications, helping businesses reach a wider audience with a single codebase.</p>
+        </div>
+        <div class="right-1">
+            <img src="images/Hybrid -app-development .gif" alt="3">
+        </div>
+    </div>
+
+    <div class="software">
+        <div class="software-2">
+            <div class="left-2">
+                <img src="images/Beneficios-PWA.gif" alt="4">
+            </div>
+            <div class="right-2">
+                <h2><span>Progressive Web App</span> Development</h2>
+                <p>Our Progressive Web App development services deliver fast, reliable, and engaging web experiences that work seamlessly across all devices. PWAs combine the best of web and mobile apps, offering offline access, push notifications, and app-like performance-without the need for an app store. We build PWAs that enhance user engagement and boost performance while reducing development costs.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="software">
+        <div class="software-1">
+        <div class="left-1">
+            <h2><span>Wearable and Embedded</span> Software</h2>
+            <p>We specialize in developing smart, efficient software solutions for wearable devices and embedded systems. Our services cover everything from fitness trackers and smartwatches to loT devices and industrial controllers. With a focus on low power consumption, real-time performance, and seamless connectivity, we create custom firmware and applications that integrate perfectly with hardware to deliver intuitive, data-driven user experiences.</p>
+        </div>
+        <div class="right-1">
+            <img src="images/Wearable img.gif" alt="software development">
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="footer-logo">
+            <img src="images/logo.webp" alt="logo">
+            <h3>Vetri IT Systems</h3>
+        </div>
+
+        <div class="footer-div">
+            <p class="heading">Quick Links</p>
+            <nav class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="#">Web Development</a>
+                <a href="software.html">Software Development</a>
+                <a href="digital.html">Digital Marketing</a>
+            </nav>
+        </div>
+
+        <div class="footer-contact">
+            <p class="heading">Contact Details</p>
+            <div class="footer-contact">
+                <p><span class="icon"><img src="images/telephone.png" alt="telephone"></span>8438558627, 8438558527</p>
+                <p><span class="icon"><img src="images/mail.png" alt="email"></span>business@vetriit.com</p>
+                <p><span class="icon"><img src="images/location.png" alt="location"></span>VTS & VIS, Surandai.</p>
+
+            </div>
+        </div>
+
+        <div class="footer-div">
+            <p class="heading">Follow Us</p>
+            <div class="footer-social">
+            <div class="social-icon">
+                <img src="images/instagram.png" alt="insta">
+            </div>
+
+             <div class="social-icon">
+                <img src="images/linkedin.png" alt="linkedin">
+            </div>
+
+             <div class="social-icon">
+                <img src="images/facebook-logo.png" alt="facebook">
+            </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
