@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digital Marketing</title>
     <style>
         *{
             margin: 0;
@@ -199,6 +199,10 @@
       flex-direction: column;
       align-items: center;
       min-height: 650px;
+      transition: transform 0.6s ease;
+    }
+    .plan-card:hover {
+      transform: scale(1.05);
     }
     .plan-header {
       background: #1272ea;
@@ -230,7 +234,12 @@
       justify-content: center;
       font-size: 22px;
       font-weight: 400;
+      transition: transform 0.5s ease;
     }
+
+    .plan-price:hover {
+      transform: translateX(-50%) scale(1.1);
+    }   
     .plan-list {
       margin-top: 70px;
       margin-bottom: 40px;
